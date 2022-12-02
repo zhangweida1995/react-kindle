@@ -2,3 +2,7 @@
     font-family: "digital";
     src: url("./digital-7-4.ttf");
   }
+  @font-face {
+    font-family: "PUTHIAfont";
+    src: url("./PUTHIAfont.ttf");
+  }

@@ -1,6 +1,10 @@
+
+.time-wrap .date-week{
+  font-family:PUTHIAfont, digital;
+}
 .time-wrap .time{
   font-size: 120px;
-  font-family: digital;
+  font-family:PUTHIAfont, digital;
   background: black;
   color: white;
   margin:20px !important;

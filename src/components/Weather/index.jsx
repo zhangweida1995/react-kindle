@@ -18,15 +18,24 @@ export default class Weather extends Component {
         fetch(`${this.state.weatherApi}?stationid=${stationid}&_=${this.timeStamp()}`)
             .then(res => res.json())
             .then(res => {
-                console.log(res.data.predict)
                 this.setState({ data: res.data.predict })
             })
     }
+
     transfer = (dayWeather, nightWeather) => {
-        if (dayWeather && nightWeather) {
+        if (dayWeather == '9999') return nightWeather
+        else if (dayWeather && nightWeather) {
             return dayWeather === nightWeather ? dayWeather : `${dayWeather}转${nightWeather}`
         }
         return dayWeather || nightWeather
+    }
+    getWind = (wind) => {
+        return wind == '9999' ? null : wind
+    }
+    getTemperature = (dayTe, nightTe) => {
+        if (dayTe == '9999') return nightTe + '°C'
+        else if (nightTe == '9999') return dayTe + '°C'
+        return `${dayTe}°C ~ ${nightTe}°C`
     }
     render() {
         if (this.state.data) {
@@ -34,18 +43,19 @@ export default class Weather extends Component {
             const { data: { detail } } = this.state
             const currentDay = Array.isArray(detail) && detail[0] ? detail[0] : {}
             const { day, night } = currentDay
+            const [direct, power] = [this.getWind(day.wind.direct), this.getWind(day.wind.power)]
+            const isSplitLine = direct && power
             return (
                 <div className='weather-wrap'>
                     <div className='weather'>
-                        <h1>{
-                            this.transfer(day.weather.info, night.weather.info)
-                        }</h1>
+                        <h1>{this.transfer(day.weather.info, night.weather.info)}</h1>
                     </div>
                     <div className='temperature'>
-                        {day.weather.temperature}°C ~ {night.weather.temperature}°C
+                        {this.getTemperature(day.weather.temperature, night.weather.temperature)}
+                        {isSplitLine && (<span className='split-line'>|</span>)}
                     </div>
                     <div className='wind'>
-                        {day.wind.direct} {day.wind.power}
+                        {direct} {power}
                     </div>
                     <div className='station'>
                         <h4>{data.station.province}•{data.station.city}</h4>
