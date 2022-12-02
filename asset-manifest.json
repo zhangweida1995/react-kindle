@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kindle/static/css/main.6e1bd51d.css",
+    "main.js": "/kindle/static/js/main.653ffc50.js",
+    "static/js/787.38e23316.chunk.js": "/kindle/static/js/787.38e23316.chunk.js",
+    "index.html": "/kindle/index.html",
+    "main.6e1bd51d.css.map": "/kindle/static/css/main.6e1bd51d.css.map",
+    "main.653ffc50.js.map": "/kindle/static/js/main.653ffc50.js.map",
+    "787.38e23316.chunk.js.map": "/kindle/static/js/787.38e23316.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e1bd51d.css",
+    "static/js/main.653ffc50.js"
+  ]
+}
