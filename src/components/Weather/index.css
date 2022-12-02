@@ -7,8 +7,6 @@
     background:#b3b2b2;
     margin:20px ;
 }
-.weather-wrap .temperature::after{
-    content:'|';
+.weather-wrap .split-line{
     margin:0 20px;
-
 }
