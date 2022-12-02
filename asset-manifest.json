@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.ce5c6e74.css",
-    "main.js": "./static/js/main.878f4c99.js",
-    "static/js/787.38e23316.chunk.js": "./static/js/787.38e23316.chunk.js",
-    "index.html": "./index.html",
-    "main.ce5c6e74.css.map": "./static/css/main.ce5c6e74.css.map",
-    "main.878f4c99.js.map": "./static/js/main.878f4c99.js.map",
-    "787.38e23316.chunk.js.map": "./static/js/787.38e23316.chunk.js.map"
+    "main.css": "/kindle/static/css/main.ce5c6e74.css",
+    "main.js": "/kindle/static/js/main.f47d4ff1.js",
+    "static/js/787.38e23316.chunk.js": "/kindle/static/js/787.38e23316.chunk.js",
+    "index.html": "/kindle/index.html",
+    "main.ce5c6e74.css.map": "/kindle/static/css/main.ce5c6e74.css.map",
+    "main.f47d4ff1.js.map": "/kindle/static/js/main.f47d4ff1.js.map",
+    "787.38e23316.chunk.js.map": "/kindle/static/js/787.38e23316.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce5c6e74.css",
-    "static/js/main.878f4c99.js"
+    "static/js/main.f47d4ff1.js"
   ]
 }
