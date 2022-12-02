@@ -1,0 +1,14 @@
+.weather-wrap .temperature,.wind{
+    display: inline-block;
+    font-size: 28px;
+}
+.weather-wrap .divider {
+    height: 1px;
+    background:#b3b2b2;
+    margin:20px ;
+}
+.weather-wrap .temperature::after{
+    content:'|';
+    margin:0 20px;
+
+}
