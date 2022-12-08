@@ -35,6 +35,16 @@ export default class Time extends Component {
         }
         return weekEnum[day]
     }
+    getLocaleTime = () => {
+        const { date } = this.state
+        const add0 = (num) => {
+            num = num.toString()
+            return num.length === 1 ? `0${num}` : num
+        }
+        let hours = date.getHours(), minute = date.getMinutes(), seconds = date.getSeconds()
+
+        return `${add0(hours)}:${add0(minute)}:${add0(seconds)}`
+    }
     render() {
         const { date } = this.state
         return (
@@ -51,7 +61,7 @@ export default class Time extends Component {
                     <span>{chineseDate.m}</span>
                     <span>{chineseDate.d}</span>
                 </h4>
-                <h1 className='time'>{date.toLocaleTimeString()}</h1>
+                <h1 className='time'>{this.getLocaleTime()}</h1>
             </div>
         )
     }
